@@ -1,11 +1,11 @@
 {
-  "name": "enumify",
-  "version": "2.0.0",
-  "author": "Axel Rauschmayer",
+  "name": "enumify-ts",
+  "version": "1.0.0",
+  "author": "Matteo Zanella",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rauschma/enumify"
+    "url": "https://github.com/MatteoZanella/ts-enumify"
   },
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
@@ -18,8 +18,8 @@
     "prepublishOnly": "npm run clean && npm run build"
   },
   "devDependencies": {
-    "@types/node": "^13.1.6",
     "@types/mocha": "^5.2.7",
-    "mocha": "^7.0.0"
+    "@types/node": "^13.1.6",
+    "mocha": "^7.2.0"
   }
 }
