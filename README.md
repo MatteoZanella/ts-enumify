@@ -1,24 +1,27 @@
 # Enumify
 
-A JavaScript library that helps with the enum pattern. Also supports TypeScript.
+A JavaScript library that helps with the enum pattern based on TypeScript.
+This fork of [rauschma/enumify](https://github.com/rauschma/enumify) permits to infer the correct type from constructed 
+collections: for example, the type of ```enumvalues()``` will be ```Array<YourClass>``` instead of ```Array<Enumify>```.
+This can be useful if you want to perform some operation over all the keys or accessing custom properties using ```enumValueOf()```
 
 Installation:
 
 ```text
-npm install enumify
+npm install enumify-ts
 ```
 
 ## Basic usage
 
 ```ts
-  class Color extends Enumify {
+  class Color extends Enumify<Color>() {
     static red = new Color();
     static orange = new Color();
     static yellow = new Color();
     static green = new Color();
     static blue = new Color();
     static purple = new Color();
-    static _ = this.closeEnum(); // TypeScript: Color.closeEnum()
+    private static _ = Color.closeEnum()
   }
 
   // Instance properties
@@ -26,6 +29,10 @@ npm install enumify
     Color.red.enumKey, 'red');
   assert.equal(
     Color.red.enumOrdinal, 0);
+  
+  // Collections properties
+  assert.equal(Weekday.enumValues[5].isWorkDay, false);
+
   
   // Prototype methods
   assert.equal(
@@ -67,13 +74,13 @@ npm install enumify
 
 See:
 
-* `ts/test/index_test.ts`
+* `ts/test/index.spec.ts`
 * `ts/test/state.ts`
 
 Run tests like this (after compiling TypeScript, e.g. via `npm run build`):
 
 ```
-npm t dist/test/index_test.js
+npm t dist/test/index.spec.js
 ```
 
 ## Support for public static fields

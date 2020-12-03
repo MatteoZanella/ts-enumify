@@ -1,7 +1,7 @@
 import { strict as assert } from 'assert';
 import { Enumify } from '../src';
 
-export class State extends Enumify {
+export class State extends Enumify() {
   static start = new State({
     done: false,
     accept(x: string) {
