@@ -33,11 +33,19 @@ export function Enumify<T>() {
             return this.enumValues[Symbol.iterator]();
         }
 
+        static fromJSON(str: string): undefined | T {
+            return this.enumValueOf(str.replace(this.name + ".", ""));
+        }
+
         // #Instance
         enumKey!: string;
         enumOrdinal!: number;
-        toString() {
+
+        toJSON(){
             return this.constructor.name + '.' + this.enumKey;
+        }
+        toString() {
+            return this.toJSON();
         }
     }
 }

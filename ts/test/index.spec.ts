@@ -100,6 +100,28 @@ test('Iterables properties', () => {
    assert.equal(Weekday.enumValues[5].isWorkDay, false);
 });
 
+test('Serialization', () => {
+   class Weekday extends Enumify<Weekday>() {
+      static monday = new Weekday(true);
+      static tuesday = new Weekday(true);
+      static wednesday = new Weekday(true);
+      static thursday = new Weekday(true);
+      static friday = new Weekday(true);
+      static saturday = new Weekday(false);
+      static sunday = new Weekday(false);
+      static _ = Weekday.closeEnum();
+
+      isWorkDay: boolean;
+
+      constructor(isWorkDay: boolean) {
+         super();
+         this.isWorkDay = isWorkDay;
+      }
+   }
+   assert.equal(Weekday.monday.toJSON(), 'Weekday.monday');
+   assert.equal(Weekday.fromJSON(Weekday.monday.toJSON()), Weekday.monday);
+});
+
 test('switch', () => {
    class Weekday extends Enumify() {
       static monday = new Weekday();
