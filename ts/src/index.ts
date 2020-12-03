@@ -1,5 +1,5 @@
 export function Enumify<T>() {
-    return class Enums {
+    return class Enumify{
         // #Static
         static enumKeys: Array<string>;
         static enumValues: Array<T>;
