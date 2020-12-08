@@ -7,6 +7,19 @@
     "type": "git",
     "url": "https://github.com/MatteoZanella/ts-enumify"
   },
+  "keywords": [
+    "typescript",
+    "enum",
+    "library",
+    "javascript",
+    "generics",
+    "enumerator",
+    "node",
+    "js",
+    "ts",
+    "lib",
+    "type"
+  ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
