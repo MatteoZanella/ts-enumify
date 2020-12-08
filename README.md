@@ -11,6 +11,7 @@ Installation:
 npm install enumify-ts
 ```
 ##Docs
+
 ### Class usage
 ```ts
 class Color extends Enumify<Color>() {
