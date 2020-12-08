@@ -1,25 +1,36 @@
 {
   "name": "enumify-ts",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "author": "Matteo Zanella",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/MatteoZanella/ts-enumify"
   },
-  "main": "./dist/src/index.js",
-  "types": "./dist/src/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "/lib"
+  ],
   "scripts": {
-    "clean": "rm -rf dist/*",
+    "clean": "rm -rf lib/*",
     "build": "tsc",
     "watch": "tsc --watch",
-    "test": "mocha --ui qunit",
-    "testall": "mocha --ui qunit dist/test",
+    "test": "mocha",
     "prepublishOnly": "npm run clean && npm run build"
   },
+  "directories": {
+    "lib": "./lib",
+    "src": "./src",
+    "test": "./test"
+  },
   "devDependencies": {
+    "@types/chai": "^4.2.14",
     "@types/mocha": "^5.2.7",
     "@types/node": "^13.1.6",
-    "mocha": "^7.2.0"
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "ts-node": "9.1.0",
+    "typescript": "^4.1.2"
   }
 }

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "rootDir": "ts",
-    "outDir": "dist",
+    "rootDir": "src",
+    "outDir": "lib",
     "target": "es2019",
     "lib": [
       "es2019"
@@ -11,5 +11,8 @@
     "strict": true,
     "declaration": true,
     "sourceMap": true
-  }
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
 }
