@@ -10,7 +10,6 @@ Installation:
 ```text
 npm install enumify-ts
 ```
-##Docs
 
 ### Class usage
 ```ts
