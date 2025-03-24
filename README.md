@@ -1,4 +1,4 @@
-# Enumify
+# Enumify-TS · [![npm](https://img.shields.io/npm/v/enumify-ts.svg)](https://www.npmjs.com/package/enumify-ts) [![npm](https://img.shields.io/npm/dm/enumify-ts.svg)](https://www.npmjs.com/package/enumify-ts)
 
 A JavaScript library that helps with the enum pattern based on TypeScript.
 This fork of [rauschma/enumify](https://github.com/rauschma/enumify) permits to infer the correct type from constructed 
